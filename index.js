@@ -1,4 +1,4 @@
-const techniques = [
+const TECHNIQUES = [
     { category: "Basic Techniques", name: "Empathy", weight: 1, description: "When we're upset, we need someone to listen and see the world through our eyes without trying to cheer us up, help us, or give us advice. Although this won't usually lead to a cure, it can be a relief to know that someone's listening." },
     { category: "Basic Techniques", name: "Agenda Setting", weight: 1, description: "Agenda Setting is the most basic and important technique of all. First, try to define the problem you want help with. It must be real and specific as to person, place, and time. Ask yourself, \"When was I upset? What time of day was it? Where was I? Who was I interacting with? What was going on?\" Now ask yourself if you're willing to roll up your sleeves and work on it now, rather than just talking about it endlessly. Ask yourself, \"What would it be worth to me to solve this problem? How hard would I be willing to work on the solution?\"" },
     { category: "Basic Techniques", name: "Identify the Distortions", weight: 1, description: "Use the Checklist of Cognitive Distortions to identify the distortions in each negative thought." },
@@ -50,32 +50,35 @@ const techniques = [
     { category: "Interpersonal Techniques", name: "Five Secrets of Effective Communication", weight: 1, description: "The Five Secrets of Effective Communication can help you resolve virtually any relationship problem quickly. These techniques require considerable practice and must come from the heart or they'll backfire. 1. The Disarming Technique. Find some truth in what the other person is saying, even if it seems totally unreasonable or unfair. 2. Empathy. Try to see the world through the other person's eyes. Paraphrase their words (Thought Empathy) and acknowledge how they're probably feeling, based on what she or he said (Feeling Empathy). 3. Inquiry. Ask gentle, probing questions to learn more about what the other person is thinking and feeling. 4. \"I Feel\" Statements. Express your own ideas and feelings in a direct, tactful manner. Use \"I Feel\" Statements, such as \"I'm feeling upset,\" rather than \"You\" statements, such as \"You're making me furious!\" 5. Stroking. Convey an attitude of respect, even if you feel angry with the other person. Find something genuinely positive to say, even in the heat of battle." },
     { category: "Interpersonal Techniques", name: "One-Minute Drill", weight: 1, description: "You and your partner take turns playing the roles of Talker and Listener. The Talker spends 30 seconds expressing his or her feelings about a relationship problem. The Listener paraphrases what the Talker said as accurately as possible. The Talker rates the Listener's accuracy from 0% – 100%. Once the Listener receives a rating of 95% or better, you can do a role-reversal. This technique ensures nearly perfect communication. It quickly breaks the pattern of accusation, self-defense, and hostility, and shifts the dialogue to a level of greater vulnerability and intimacy." },
     { category: "Misc", name: "Havening", weight: 10 },
-    { category: "Misc", name: "Belly Breath", weight: 10 },
-    { category: "Misc", name: "Breathe In, Breath Out 3 times", weight: 10 },
-    { category: "Misc", name: "Count Thoughts", weight: 10 },
-    { category: "Misc", name: "Embrace Thoughts", weight: 10 },
-    { category: "Misc", name: "Feel Thoughts in My Body", weight: 10 },
+    { category: "Misc", name: "Belly breathing", description: "Focus on the rise and fall of my belly", weight: 10 },
+    { category: "Misc", name: "Nostril breathing", description: "Focus on the feel of the air touching my inner nostrils", weight: 10 },
+    { category: "Misc", name: "Breathe in, Breath out 3 times", weight: 10 },
+    { category: "Misc", name: "Count my thoughts", weight: 10 },
+    { category: "Misc", name: "Embrace my thoughts", weight: 10 },
+    { category: "Misc", name: "Feel my thoughts in my body", weight: 10 },
     { category: "Misc", name: "Z Point Erase the Tape", weight: 10 },
-    { category: "Misc", name: "Be Set Free Fast", weight: 10 },
-    { category: "Misc", name: "Write It Down", weight: 10 },
-    { category: "Misc", name: "Visualize as Colors", weight: 10 },
-    { category: "Misc", name: "Watch thoughts", weight: 10 },
-    { category: "Misc", name: "Thinking Time (Eckhart Voice)", weight: 10 },
-    { category: "Misc", name: "Breathe & Feel & Think", weight: 10 },
-    { category: "Misc", name: "Label Thoughts", weight: 10 },
-    { category: "Misc", name: "Inner Body", weight: 10 },
+    { category: "Misc", name: "Be Set Free Fast", description: "Use a keyword after each sentence", weight: 10 },
+    { category: "Misc", name: "Write thoughts down or visualize the words", weight: 10 },
+    { category: "Misc", name: "Visualize my  thoughts as colors, sizes, and shapes", weight: 10 },
+    { category: "Misc", name: "Watch my thinker", weight: 10 },
+    { category: "Misc", name: "Thinking time", weight: 10, description: "Give my thinker my full attention" },
+    { category: "Misc", name: "Thought defusion--thoughts on leaves", weight: 10 },
+    { category: "Misc", name: "Thought defusion--boring voice i.e. Eckhart Tolle", weight: 10 },
+    { category: "Misc", name: "Watch breathing while feeling sensations & paying attention to my thinking", weight: 10 },
+    { category: "Misc", name: "Label my thoughts", weight: 10 },
+    { category: "Misc", name: "Feel the Inner Body", weight: 10 },
     { category: "Misc", name: "Sedona Method: Triple Welcoming", weight: 10 },
     { category: "Misc", name: "Sedona Method: Could you? Would you? When?", weight: 10 },
     { category: "Misc", name: "Sedona Method: 5th Way", weight: 10 },
     { category: "Misc", name: "Sedona Method: Holistic Releasing", weight: 5 },
-    { category: "Misc", name: "Question Thoughts", weight: 10 },
-    { category: "Misc", name: "Daily Mood Log", weight: 10 }
+    { category: "Misc", name: "Question my thoughts", weight: 10 },
+    { category: "Misc", name: "Daily Mood Log--automatic thought, distortions, realistic response", weight: 10 }
 ];
 
-const PAGE_SIZE = 30;
+const PAGE_SIZE = 7;
 const HIGHLIGHTED_CLASS_NAME = "current";
 
-let allItemsSampled = [];
+let techniquesWithWeightedRandomization = [];
 let curPos = 0;
 
 const moreTechniquesBtn = document.querySelector(".more");
@@ -105,7 +108,8 @@ function weightedRandomSamplingUntilEmpty(items) {
 }
 
 function shuffleItems() {
-    allItemsSampled = weightedRandomSamplingUntilEmpty(techniques.slice());
+    techniquesWithWeightedRandomization = weightedRandomSamplingUntilEmpty(TECHNIQUES.slice());
+    console.log("🚀 ~ shuffleItems ~ techniquesWithWeightedRandomization:", techniquesWithWeightedRandomization)
 }
 
 function removeHighlighting() {
@@ -114,13 +118,13 @@ function removeHighlighting() {
 }
 
 function getMoreTechniques() {
-    const endPos = Math.min(curPos + PAGE_SIZE, allItemsSampled.length);
+    const endPos = Math.min(curPos + PAGE_SIZE, techniquesWithWeightedRandomization.length);
     removeHighlighting();
     for (let i = curPos; i < endPos; i++) {
-        const { name, description } = allItemsSampled[i];
+        const { name, description } = techniquesWithWeightedRandomization[i];
         const li = document.createElement("li");
         li.className = HIGHLIGHTED_CLASS_NAME;
-        li.textContent = `${i} ${name} `;
+        li.textContent = `${name} `;
 
         if (description) {
             const btn = document.createElement("button");
