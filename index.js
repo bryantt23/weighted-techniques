@@ -63,8 +63,9 @@ const techniques = [
     { category: "Misc", name: "Label Thoughts", weight: 10 },
     { category: "Misc", name: "Sedona Method", weight: 10 },
     { category: "Misc", name: "Question Thoughts", weight: 10 },
-    { category: "Misc", name: "CBT", weight: 10 }
+    { category: "Misc", name: "Daily Mood Log", weight: 10 }
 ];
+
 function weightedRandomSamplingUntilEmpty(items) {
     let results = [];
     let totalWeight = items.reduce((sum, item) => sum + item.weight, 0);
@@ -87,6 +88,23 @@ function weightedRandomSamplingUntilEmpty(items) {
     return results;
 }
 
-// Example usage with any array like 'miscTechniques'
 const allItemsSampled = weightedRandomSamplingUntilEmpty(techniques.slice()); // Use a copy to preserve the original
 console.log(allItemsSampled);
+
+const pageSize = 7
+let curPos = 0;
+const button = document.querySelector(".more"), ul = document.querySelector('.techniques')
+
+button.addEventListener("click", getMoreTechniques)
+
+function getMoreTechniques() {
+    const endPos = Math.min(curPos + pageSize, techniques.length)
+    for (let i = curPos; i < endPos; i++) {
+        const li = document.createElement("li")
+        li.textContent = allItemsSampled[i].name
+        ul.appendChild(li)
+    }
+    curPos = endPos
+}
+
+getMoreTechniques()
