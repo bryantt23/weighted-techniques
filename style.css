@@ -1,16 +1,63 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  font-size: 20px; /* Further increased base font size */
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px; /* Set a max-width for the container */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 32px; /* Larger font size for heading */
+}
+
 button {
   margin-left: 10px;
   cursor: pointer;
+  font-size: 18px; /* Increased font size for buttons */
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
 }
 
 li {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  padding: 12px;
+  list-style-type: none; /* Removes bullet points */
+  border: 1px solid #ddd;
+  background-color: #e0e0e0; /* Lighter grey background */
 }
 
 .current {
-  background-color: greenyellow;
+  background-color: #d0d0d0; /* Even lighter green color */
+  font-weight: bold;
 }
 
 .description {
-  background-color: white;
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 5px;
+  border-left: 3px solid #3498db;
+  font-size: 18px; /* Slightly larger font for descriptions */
+}
+
+ul {
+  padding: 0;
 }
