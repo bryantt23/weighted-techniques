@@ -1,5 +1,4 @@
 const techniques = [
-
     { category: "Basic Techniques", name: "Empathy", weight: 1, description: "When we're upset, we need someone to listen and see the world through our eyes without trying to cheer us up, help us, or give us advice. Although this won't usually lead to a cure, it can be a relief to know that someone's listening." },
     { category: "Basic Techniques", name: "Agenda Setting", weight: 1, description: "Agenda Setting is the most basic and important technique of all. First, try to define the problem you want help with. It must be real and specific as to person, place, and time. Ask yourself, \"When was I upset? What time of day was it? Where was I? Who was I interacting with? What was going on?\" Now ask yourself if you're willing to roll up your sleeves and work on it now, rather than just talking about it endlessly. Ask yourself, \"What would it be worth to me to solve this problem? How hard would I be willing to work on the solution?\"" },
     { category: "Basic Techniques", name: "Identify the Distortions", weight: 1, description: "Use the Checklist of Cognitive Distortions to identify the distortions in each negative thought." },
@@ -96,6 +95,7 @@ function weightedRandomSamplingUntilEmpty(items) {
 }
 
 let allItemsSampled
+const HIGHLIGHTED_CLASS_NAME = "current"
 
 function shuffleItems() {
     allItemsSampled = weightedRandomSamplingUntilEmpty(techniques.slice());
@@ -110,11 +110,19 @@ moreTechniques.addEventListener("click", getMoreTechniques)
 
 reset.addEventListener("click", resetTechniques)
 
+function removeHighlighting() {
+    const highlighted = document.querySelectorAll(`.${HIGHLIGHTED_CLASS_NAME}`)
+    console.log("🚀 ~ removeHighlighting ~ highlighted:", highlighted)
+    highlighted.forEach(elem => elem.classList.remove(HIGHLIGHTED_CLASS_NAME))
+}
+
 function getMoreTechniques() {
     const endPos = Math.min(curPos + pageSize, techniques.length)
+    removeHighlighting()
     for (let i = curPos; i < endPos; i++) {
         const { name, description } = allItemsSampled[i]
         const li = document.createElement("li")
+        li.className = HIGHLIGHTED_CLASS_NAME
         li.textContent = `${i} ${name}`
 
         if (description) {

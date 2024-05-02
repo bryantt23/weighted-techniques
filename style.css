@@ -1,0 +1,12 @@
+button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.current {
+  background-color: greenyellow;
+}
