@@ -88,23 +88,37 @@ function weightedRandomSamplingUntilEmpty(items) {
     return results;
 }
 
-const allItemsSampled = weightedRandomSamplingUntilEmpty(techniques.slice()); // Use a copy to preserve the original
-console.log(allItemsSampled);
+let allItemsSampled
 
-const pageSize = 7
+function shuffleItems() {
+    allItemsSampled = weightedRandomSamplingUntilEmpty(techniques.slice());
+    console.log("🚀 ~ shuffleItems ~ allItemsSampled:", allItemsSampled)
+}
+
+const pageSize = 30
 let curPos = 0;
-const button = document.querySelector(".more"), ul = document.querySelector('.techniques')
+const moreTechniques = document.querySelector(".more"), reset = document.querySelector(".reset"), ul = document.querySelector('.techniques')
 
-button.addEventListener("click", getMoreTechniques)
+moreTechniques.addEventListener("click", getMoreTechniques)
+
+reset.addEventListener("click", resetTechniques)
 
 function getMoreTechniques() {
     const endPos = Math.min(curPos + pageSize, techniques.length)
     for (let i = curPos; i < endPos; i++) {
         const li = document.createElement("li")
-        li.textContent = allItemsSampled[i].name
+        li.textContent = i + " " + allItemsSampled[i].name
         ul.appendChild(li)
     }
     curPos = endPos
 }
 
-getMoreTechniques()
+function resetTechniques() {
+    ul.innerHTML = ""
+    shuffleItems()
+    curPos = 0
+    getMoreTechniques()
+
+}
+
+resetTechniques()
