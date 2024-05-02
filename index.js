@@ -132,6 +132,7 @@ function getMoreTechniques() {
                 if (!descriptionShown) {
                     if (!descriptionElement) {
                         descriptionElement = document.createElement("p");
+                        descriptionElement.className = "description"
                         descriptionElement.innerText = description;
                     }
                     li.appendChild(descriptionElement);
