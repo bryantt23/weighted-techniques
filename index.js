@@ -75,7 +75,7 @@ const TECHNIQUES = [
     { category: "Misc", name: "Daily Mood Log--automatic thought, distortions, realistic response", weight: 10 }
 ];
 
-const PAGE_SIZE = 7;
+const PAGE_SIZE = 3;
 const HIGHLIGHTED_CLASS_NAME = "current";
 
 let techniquesWithWeightedRandomization = [];
