@@ -113,24 +113,33 @@ reset.addEventListener("click", resetTechniques)
 function getMoreTechniques() {
     const endPos = Math.min(curPos + pageSize, techniques.length)
     for (let i = curPos; i < endPos; i++) {
-        let descriptionShown = false
         const { name, description } = allItemsSampled[i]
         const li = document.createElement("li")
         li.textContent = `${i} ${name}`
+
         if (description) {
             const btn = document.createElement("button")
             btn.textContent = `Show Description`
+            let descriptionShown = false
+            let descriptionElement = null
+
             btn.addEventListener("click", () => {
-                const p = document.createElement("p")
-                p.innerText = description
-                if (descriptionShown) {
-                    li.removeChild(li.children[li.children.length - 1])
+                if (!descriptionShown) {
+                    if (!descriptionElement) {
+                        descriptionElement = document.createElement("p")
+                        descriptionElement.innerText = description
+                    }
+                    li.appendChild(descriptionElement)
+                    btn.textContent = "Hide Description"
+                    descriptionShown = true
                 }
                 else {
-                    li.appendChild(p)
+                    if (descriptionElement) {
+                        li.removeChild(descriptionElement)
+                    }
+                    btn.textContent = "Show Description"
+                    descriptionShown = false
                 }
-                btn.textContent = `${descriptionShown ? "Show" : "Hide"} Description`
-                descriptionShown = !descriptionShown
             })
             li.appendChild(btn)
         }
