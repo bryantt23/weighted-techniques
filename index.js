@@ -72,6 +72,16 @@ const techniques = [
     { category: "Misc", name: "Daily Mood Log", weight: 10 }
 ];
 
+const PAGE_SIZE = 30;
+const HIGHLIGHTED_CLASS_NAME = "current";
+
+let allItemsSampled = [];
+let curPos = 0;
+
+const moreTechniquesBtn = document.querySelector(".more");
+const resetBtn = document.querySelector(".reset");
+const techniquesList = document.querySelector('.techniques');
+
 function weightedRandomSamplingUntilEmpty(items) {
     let results = [];
     let totalWeight = items.reduce((sum, item) => sum + item.weight, 0);
@@ -94,74 +104,61 @@ function weightedRandomSamplingUntilEmpty(items) {
     return results;
 }
 
-let allItemsSampled
-const HIGHLIGHTED_CLASS_NAME = "current"
-
 function shuffleItems() {
     allItemsSampled = weightedRandomSamplingUntilEmpty(techniques.slice());
-    console.log("🚀 ~ shuffleItems ~ allItemsSampled:", allItemsSampled)
 }
 
-const pageSize = 30
-let curPos = 0;
-const moreTechniques = document.querySelector(".more"), reset = document.querySelector(".reset"), ul = document.querySelector('.techniques')
-
-moreTechniques.addEventListener("click", getMoreTechniques)
-
-reset.addEventListener("click", resetTechniques)
-
 function removeHighlighting() {
-    const highlighted = document.querySelectorAll(`.${HIGHLIGHTED_CLASS_NAME}`)
-    console.log("🚀 ~ removeHighlighting ~ highlighted:", highlighted)
-    highlighted.forEach(elem => elem.classList.remove(HIGHLIGHTED_CLASS_NAME))
+    const highlightedItems = document.querySelectorAll(`.${HIGHLIGHTED_CLASS_NAME}`);
+    highlightedItems.forEach(item => item.classList.remove(HIGHLIGHTED_CLASS_NAME));
 }
 
 function getMoreTechniques() {
-    const endPos = Math.min(curPos + pageSize, techniques.length)
-    removeHighlighting()
+    const endPos = Math.min(curPos + PAGE_SIZE, allItemsSampled.length);
+    removeHighlighting();
     for (let i = curPos; i < endPos; i++) {
-        const { name, description } = allItemsSampled[i]
-        const li = document.createElement("li")
-        li.className = HIGHLIGHTED_CLASS_NAME
-        li.textContent = `${i} ${name}`
+        const { name, description } = allItemsSampled[i];
+        const li = document.createElement("li");
+        li.className = HIGHLIGHTED_CLASS_NAME;
+        li.textContent = `${i} ${name} `;
 
         if (description) {
-            const btn = document.createElement("button")
-            btn.textContent = `Show Description`
-            let descriptionShown = false
-            let descriptionElement = null
+            const btn = document.createElement("button");
+            btn.textContent = "Show Description";
+            let descriptionShown = false;
+            let descriptionElement = null;
 
             btn.addEventListener("click", () => {
                 if (!descriptionShown) {
                     if (!descriptionElement) {
-                        descriptionElement = document.createElement("p")
-                        descriptionElement.innerText = description
+                        descriptionElement = document.createElement("p");
+                        descriptionElement.innerText = description;
                     }
-                    li.appendChild(descriptionElement)
-                    btn.textContent = "Hide Description"
-                    descriptionShown = true
+                    li.appendChild(descriptionElement);
+                    btn.textContent = "Hide Description";
+                    descriptionShown = true;
+                } else {
+                    li.removeChild(descriptionElement);
+                    btn.textContent = "Show Description";
+                    descriptionShown = false;
                 }
-                else {
-                    if (descriptionElement) {
-                        li.removeChild(descriptionElement)
-                    }
-                    btn.textContent = "Show Description"
-                    descriptionShown = false
-                }
-            })
-            li.appendChild(btn)
+            });
+
+            li.appendChild(btn);
         }
-        ul.appendChild(li)
+        techniquesList.appendChild(li);
     }
-    curPos = endPos
+    curPos = endPos;
 }
 
 function resetTechniques() {
-    ul.innerHTML = ""
-    shuffleItems()
-    curPos = 0
-    getMoreTechniques()
-
+    techniquesList.innerHTML = "";
+    shuffleItems();
+    curPos = 0;
+    getMoreTechniques();
 }
 
-resetTechniques()
+moreTechniquesBtn.addEventListener("click", getMoreTechniques);
+resetBtn.addEventListener("click", resetTechniques);
+
+resetTechniques();  // Initialize the page with techniques
