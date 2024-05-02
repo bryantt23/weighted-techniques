@@ -146,7 +146,7 @@ function getMoreTechniques() {
 
             li.appendChild(btn);
         }
-        techniquesList.appendChild(li);
+        techniquesList.prepend(li);
     }
     curPos = endPos;
 }
