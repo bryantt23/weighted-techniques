@@ -2,20 +2,20 @@ const techniques = [
     { category: "Basic Techniques", name: "Empathy", weight: 1 },
     { category: "Basic Techniques", name: "Agenda Setting", weight: 1 },
     { category: "Basic Techniques", name: "Identify the Distortions", weight: 1 },
-    { category: "Basic Techniques", name: "Straightforward Technique", weight: 1 },
-    { category: "Compassion-Based Techniques", name: "Double Standard Technique", weight: 1 },
-    { category: "Truth-Based Techniques", name: "Examine the Evidence", weight: 1 },
+    { category: "Basic Techniques", name: "Straightforward Technique", weight: 7 },
+    { category: "Compassion-Based Techniques", name: "Double Standard Technique", weight: 7 },
+    { category: "Truth-Based Techniques", name: "Examine the Evidence", weight: 7 },
     { category: "Truth-Based Techniques", name: "Experimental Technique", weight: 1 },
     { category: "Truth-Based Techniques", name: "Survey Technique", weight: 1 },
     { category: "Truth-Based Techniques", name: "Reattribution", weight: 1 },
-    { category: "Logic-Based Techniques", name: "Socratic Method", weight: 1 },
-    { category: "Logic-Based Techniques", name: "Thinking in Shades of Gray", weight: 1 },
-    { category: "Semantic Techniques", name: "Semantic Method", weight: 1 },
-    { category: "Semantic Techniques", name: "Let's Define Terms", weight: 1 },
-    { category: "Semantic Techniques", name: "Be Specific", weight: 1 },
+    { category: "Logic-Based Techniques", name: "Socratic Method", weight: 7 },
+    { category: "Logic-Based Techniques", name: "Thinking in Shades of Gray", weight: 7 },
+    { category: "Semantic Techniques", name: "Semantic Method", weight: 7 },
+    { category: "Semantic Techniques", name: "Let's Define Terms", weight: 7 },
+    { category: "Semantic Techniques", name: "Be Specific", weight: 7 },
     { category: "Quantitative Techniques", name: "Self-Monitoring", weight: 1 },
-    { category: "Quantitative Techniques", name: "Negative Practice / Worry Breaks", weight: 1 },
-    { category: "Humor-Based Techniques", name: "Paradoxical Magnification", weight: 1 },
+    { category: "Quantitative Techniques", name: "Negative Practice / Worry Breaks", weight: 7 },
+    { category: "Humor-Based Techniques", name: "Paradoxical Magnification", weight: 7 },
     { category: "Humor-Based Techniques", name: "Shame-Attacking Exercises", weight: 1 },
     { category: "Role-Playing Techniques", name: "Externalization of Voices", weight: 1 },
     { category: "Role-Playing Techniques", name: "Feared Fantasy Technique", weight: 1 },
@@ -26,7 +26,7 @@ const techniques = [
     { category: "Uncovering Techniques", name: "Individual Downward Arrow", weight: 1 },
     { category: "Uncovering Techniques", name: "Interpersonal Downward Arrow", weight: 1 },
     { category: "Uncovering Techniques", name: "What-If Technique", weight: 1 },
-    { category: "Uncovering Techniques", name: "Hidden Emotion Technique", weight: 1 },
+    { category: "Uncovering Techniques", name: "Hidden Emotion Technique", weight: 7 },
     { category: "Motivational Techniques", name: "Straightforward and Paradoxical Cost-Benefit Analysis (CBA)", weight: 1 },
     { category: "Motivational Techniques", name: "Devil's Advocate", weight: 1 },
     { category: "Motivational Techniques", name: "Stimulus Control", weight: 1 },
@@ -37,9 +37,9 @@ const techniques = [
     { category: "Classical Exposure Techniques", name: "Gradual Exposure and Flooding", weight: 1 },
     { category: "Classical Exposure Techniques", name: "Response Prevention", weight: 1 },
     { category: "Classical Exposure Techniques", name: "Distraction", weight: 1 },
-    { category: "Cognitive Exposure Techniques", name: "Cognitive Flooding", weight: 1 },
+    { category: "Cognitive Exposure Techniques", name: "Cognitive Flooding", weight: 7 },
     { category: "Cognitive Exposure Techniques", name: "Image Substitution", weight: 1 },
-    { category: "Cognitive Exposure Techniques", name: "Memory Rescripting", weight: 1 },
+    { category: "Cognitive Exposure Techniques", name: "Memory Rescripting", weight: 7 },
     { category: "Interpersonal Exposure Techniques", name: "Smile and Hello Practice", weight: 1 },
     { category: "Interpersonal Exposure Techniques", name: "David Letterman Technique", weight: 1 },
     { category: "Interpersonal Exposure Techniques", name: "Self-Disclosure", weight: 1 },
@@ -65,3 +65,28 @@ const techniques = [
     { category: "Misc", name: "Question Thoughts", weight: 10 },
     { category: "Misc", name: "CBT", weight: 10 }
 ];
+function weightedRandomSamplingUntilEmpty(items) {
+    let results = [];
+    let totalWeight = items.reduce((sum, item) => sum + item.weight, 0);
+
+    while (items.length > 0) {
+        let threshold = Math.random() * totalWeight;
+        let cumulativeWeight = 0;
+
+        for (let i = 0; i < items.length; i++) {
+            cumulativeWeight += items[i].weight;
+            if (cumulativeWeight >= threshold) {
+                results.push(items[i]);
+                totalWeight -= items[i].weight;
+                items.splice(i, 1); // Remove the item from the array
+                break;
+            }
+        }
+    }
+
+    return results;
+}
+
+// Example usage with any array like 'miscTechniques'
+const allItemsSampled = weightedRandomSamplingUntilEmpty(techniques.slice()); // Use a copy to preserve the original
+console.log(allItemsSampled);
