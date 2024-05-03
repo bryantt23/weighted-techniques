@@ -77,6 +77,7 @@ const TECHNIQUES = [
     { category: "Misc", name: "Sedona Method: Holistic Releasing", weight: 5 },
     { category: "Misc", name: "Question my thoughts", weight: 10 },
     { category: "Misc", name: "Daily Mood Log--automatic thought, distortions, realistic response", weight: 10 }
+    { category: "Misc", name: "You are responsible. What are you going to do about it?", weight: 10 }
 ];
 
 const PAGE_SIZE = 3;
