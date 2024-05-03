@@ -84,6 +84,8 @@ const TECHNIQUES = [
     },
     { category: "Misc", name: 'Redirect my attention to the now', weight: 10 },
     { category: "Misc", name: 'Nonstop thinking as long as my shoulder blades are back and down', weight: 10 },
+    { category: "Misc", name: 'Acknowledge, embrace, calm, release, transform', weight: 10 },
+    { category: "Misc", name: 'See it as an object. Get the lesson. Get rid of the object.', weight: 10 },
 ];
 
 const PAGE_SIZE = 3;
