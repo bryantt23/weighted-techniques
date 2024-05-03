@@ -81,7 +81,9 @@ const TECHNIQUES = [
     { category: "Misc", name: "Acknowledge, validate, redirect", weight: 10 },
     {
         category: "Misc", name: 'Notice your thought, as in: ah, hello, thought. I know you’re not real; you are just a thought. Oh well, you can stay there if you like, but I have things to do today so I’m just going to go ahead and do them. Then if you want to think a positive thought, go right ahead!', weight: 10
-    }
+    },
+    { category: "Misc", name: 'Redirect my attention to the now', weight: 10 },
+    { category: "Misc", name: 'Nonstop thinking as long as my shoulder blades are back and down', weight: 10 },
 ];
 
 const PAGE_SIZE = 3;
