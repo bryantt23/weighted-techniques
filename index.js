@@ -67,6 +67,7 @@ const TECHNIQUES = [
     { category: "Misc", name: "Visualize my thoughts as colors, sizes, and shapes inside of my body", weight: 10 },
     { category: "Misc", name: "Visualize my thoughts as colors, sizes, and shapes outside of my body", weight: 10 },
     { category: "Misc", name: "Watch my thinker", weight: 10 },
+    { category: "Misc", name: "Make thinker be silent for a few seconds", weight: 10 },
     { category: "Misc", name: "Thinking time", weight: 10, description: "Give my thinker my full attention" },
     { category: "Misc", name: "Thought defusion--imagine my thoughts on leaves and flying away", weight: 10 },
     { category: "Misc", name: "Thought defusion--boring voice i.e. Eckhart Tolle", weight: 10 },
