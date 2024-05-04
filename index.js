@@ -91,6 +91,7 @@ const TECHNIQUES = [
     { category: "Misc", name: 'Acknowledge, embrace, calm, release, transform', weight: 10 },
     { category: "Misc", name: 'See it as an object. Get the lesson. Get rid of the object.', weight: 10 },
     { category: "Misc", name: 'See 3 things, feel 3 things, hear 3 things', weight: 10 },
+    { category: "Misc", name: 'This feeling x21', weight: 10 },
 ];
 
 const PAGE_SIZE = 3;
