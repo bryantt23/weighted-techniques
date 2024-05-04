@@ -65,7 +65,7 @@ const TECHNIQUES = [
     { category: "Misc", name: "Be Set Free Fast", description: "Use a keyword after each sentence", weight: 10 },
     { category: "Misc", name: "Write thoughts down or visualize the words", weight: 10 },
     { category: "Misc", name: "Visualize my thoughts as colors, sizes, and shapes inside of my body", weight: 10 },
-    { category: "Misc", name: "Visualize my thoughts as colors, sizes, and shapes in outside of my body", weight: 10 },
+    { category: "Misc", name: "Visualize my thoughts as colors, sizes, and shapes outside of my body", weight: 10 },
     { category: "Misc", name: "Watch my thinker", weight: 10 },
     { category: "Misc", name: "Thinking time", weight: 10, description: "Give my thinker my full attention" },
     { category: "Misc", name: "Thought defusion--imagine my thoughts on leaves and flying away", weight: 10 },
