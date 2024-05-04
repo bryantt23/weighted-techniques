@@ -55,6 +55,7 @@ const TECHNIQUES = [
     { category: "Misc", name: "Breathe in, Breath out 3 times", weight: 10 },
     { category: "Misc", name: "Breathe in sync with my thoughts", weight: 10 },
     { category: "Misc", name: "Breathe in think, Breath out think", weight: 10 },
+    { category: "Misc", name: "Watch what the breath does to my body", weight: 10 },
     { category: "Misc", name: "Touch my fidget toy & take 3 breaths", weight: 10 },
     { category: "Misc", name: "Count my thoughts", weight: 10 },
     { category: "Misc", name: "Embrace my thoughts", weight: 10 },
@@ -75,6 +76,7 @@ const TECHNIQUES = [
     { category: "Misc", name: "Sedona Method: Could you? Would you? When?", weight: 10 },
     { category: "Misc", name: "Sedona Method: 5th Way", weight: 10 },
     { category: "Misc", name: "Sedona Method: Holistic Releasing", weight: 5 },
+    { category: "Misc", name: "Sedona Method: Could you notice this is just a memory?", weight: 5 },
     { category: "Misc", name: "Question my thoughts", weight: 10 },
     { category: "Misc", name: "Daily Mood Log--automatic thought, distortions, realistic response", weight: 10 },
     { category: "Misc", name: "You are responsible. What are you going to do about it?", weight: 10 },
@@ -86,6 +88,7 @@ const TECHNIQUES = [
     { category: "Misc", name: 'Nonstop thinking as long as my shoulder blades are back and down', weight: 10 },
     { category: "Misc", name: 'Acknowledge, embrace, calm, release, transform', weight: 10 },
     { category: "Misc", name: 'See it as an object. Get the lesson. Get rid of the object.', weight: 10 },
+    { category: "Misc", name: 'See 3 things, feel 3 things, hear 3 things', weight: 10 },
 ];
 
 const PAGE_SIZE = 3;
