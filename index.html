@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thought smasher</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="sw.js"></script>
+    <link rel="stylesheet" href="/weighted-techniques/style.css" />
   </head>
   <body>
     <div class="container">
@@ -15,26 +14,20 @@
       <button class="reset">Start over</button>
       <ul class="techniques"></ul>
     </div>
-
-    <script src="techniques.js"></script>
-    <script src="index.js"></script>
+    <script src="/weighted-techniques/techniques.js"></script>
+    <script src="/weighted-techniques/index.js"></script>
     <script>
-      const swLocation =
-        window.location.hostname === 'localhost' ||
-        window.location.hostname === '127.0.0.1'
-          ? '/sw.js'
-          : 'https://bryantt23.github.io/weighted-techniques/sw.js';
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
-          navigator.serviceWorker.register(swLocation).then(
+          navigator.serviceWorker.register('/weighted-techniques/sw.js').then(
             function (registration) {
               console.log(
-                'ServiceWorker registration successful with scope: ',
+                'ServiceWorker registration successful with scope:',
                 registration.scope
               );
             },
             function (err) {
-              console.log('ServiceWorker registration failed: ', err);
+              console.log('ServiceWorker registration failed:', err);
             }
           );
         });

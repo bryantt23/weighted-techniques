@@ -1,21 +1,20 @@
-
-const CACHE_NAME = 'v1'
+const CACHE_NAME = 'v1';
 const URLS_TO_CACHE = [
-    "/weighted-techniques/",
-    "/weighted-techniques/index.html",
-    "/weighted-techniques/style.css",
-    "/weighted-techniques/index.js"
-]
+    '/weighted-techniques/',
+    '/weighted-techniques/index.html',
+    '/weighted-techniques/style.css',
+    '/weighted-techniques/index.js'
+];
 
 self.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
-                console.log("Opened cache")
-                return cache.addAll(URLS_TO_CACHE)
+                console.log("Opened cache");
+                return cache.addAll(URLS_TO_CACHE);
             })
-    )
-})
+    );
+});
 
 self.addEventListener("fetch", (event) => {
     event.respondWith(
@@ -23,11 +22,10 @@ self.addEventListener("fetch", (event) => {
             // If fetch fails, check the cache
             return caches.match(event.request).then(function (response) {
                 if (response) {
-                    return response
+                    return response;
                 }
-                // If not found in cache, handle the error (optional)
-                // You could return a default offline page here
-            })
+                // Optionally return a default offline page here
+            });
         })
-    )
-})
+    );
+});
