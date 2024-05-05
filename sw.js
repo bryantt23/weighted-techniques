@@ -1,10 +1,10 @@
 
 const CACHE_NAME = 'v1'
 const URLS_TO_CACHE = [
-    "/",
-    "/index.html",
-    "/style.css",
-    "/index.js"
+    "/weighted-techniques/",
+    "/weighted-techniques/index.html",
+    "/weighted-techniques/style.css",
+    "/weighted-techniques/index.js"
 ]
 
 self.addEventListener("install", (event) => {
