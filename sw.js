@@ -4,7 +4,8 @@ const URLS_TO_CACHE = [
     '/weighted-techniques/index.html',
     '/weighted-techniques/style.css',
     '/weighted-techniques/index.js',
-    '/weighted-techniques/techniques.js'
+    '/weighted-techniques/techniques.js',
+    '/weighted-techniques/favicon.ico'
 ];
 
 self.addEventListener("install", (event) => {
