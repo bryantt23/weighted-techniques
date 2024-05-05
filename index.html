@@ -19,7 +19,11 @@
     <script src="techniques.js"></script>
     <script src="index.js"></script>
     <script>
-      const swLocation = `${window.location.origin}/sw.js`;
+      const swLocation =
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1'
+          ? '/sw.js'
+          : 'https://bryantt23.github.io/weighted-techniques/sw.js';
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
           navigator.serviceWorker.register(swLocation).then(
