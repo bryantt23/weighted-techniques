@@ -7,6 +7,7 @@
     <title>Thought smasher</title>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script> -->
     <link rel="stylesheet" href="./style.css" />
+    <script src="sw.js"></script>
   </head>
   <body>
     <div class="container">
@@ -17,5 +18,22 @@
     </div>
 
     <script src="index.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').then(
+            function (registration) {
+              console.log(
+                'ServiceWorker registration successful with scope: ',
+                registration.scope
+              );
+            },
+            function (err) {
+              console.log('ServiceWorker registration failed: ', err);
+            }
+          );
+        });
+      }
+    </script>
   </body>
 </html>
