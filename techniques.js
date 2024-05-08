@@ -93,4 +93,24 @@ const TECHNIQUES = [
     { category: "Misc", name: 'See it as an object. Get the lesson. Get rid of the object.', weight: 10 },
     { category: "Misc", name: 'See 3 things, feel 3 things, hear 3 things', weight: 10 },
     { category: "Misc", name: 'This feeling x21', weight: 10 },
+    { category: "Misc", name: 'What are the benefits of this thought/memory/etc?', weight: 10 },
+    {
+        category: "Misc", name: 'One-Point EFT', description: "As I use Mental EFT, it is with two points, doing first the EFT Setup Statement using the Karate Chop point in my mind, and then a point on the xiphoid process of the sternum that is not mentioned in tapping literature, which is located at the lowest bit of cartilage on the breastbone, the last bone before the softer part of the belly, right on the center line of the body.", weight: 10
+    },
+    {
+        category: "Misc", name: 'Ping pong', description: 'The next time you find yourself caught up in some type of love story or money trouble or worry in your head, pay attention and you will see you have thoughts that say completely the opposite. Think about this classic example of contradictory thoughts: “I never want to see him again.” “Why doesn’t he call me?” When you have opposing thoughts like this, take a step back in your mind and look at both thoughts. It’s just like looking at a ping pong match, right? Then just stay there for a while and feel what happens.', weight: 10
+    },
+    {
+        category: "Misc", name: 'Look', description: "Go for a walk outside; it doesn’t matter where or when. Focus purely on looking at your surroundings. Just look with your eyes, really look, without commenting in your head on what you see. It doesn’t matter if it’s a beautiful forest of a busy shopping street, just keep your attention on what you see and experience the moment. If at any moment a thought pops into your head, don’t grab hold of it; just observe it and let it float by, like a cloud in the sky. In the meantime, keep your attention on your surroundings and keep walking.", weight: 10
+    },
+    {
+        category: "Misc", name: 'Wait for it', description: "Sit down, close your eyes, and say to yourself, “Hmm, I wonder what the next thought is going to be.” Focus on the space inside your head where thoughts seem to come from and sit and wait for the next thought while keeping your focus.", weight: 10
+    },
+    {
+        category: "Misc", name: 'Look', description: "Go for a walk outside; it doesn’t matter where or when. Focus purely on looking at your surroundings. Just look with your eyes, really look, without commenting in your head on what you see. It doesn’t matter if it’s a beautiful forest of a busy shopping street, just keep your attention on what you see and experience the moment. If at any moment a thought pops into your head, don’t grab hold of it; just observe it and let it float by, like a cloud in the sky. In the meantime, keep your attention on your surroundings and keep walking.", weight: 10
+    },
+    {
+        category: "Misc", name: 'Hum!', description: "The amazing Indian tradition of Brahmari is a great emergency tool for calming a chaotic mind. Just close your eyes and go “Huuuummmmmmmmmmm” and keep the “mmmm” going for as long as you can until you hear the “mmmm” in the center of your brain. You can also use “Ohm” or “Aum” if you like, since they end with “mmmm” as well. Do it as long as you can, for as long as you like, and see how it calms and relaxes you.", weight: 10
+    },
+
 ];
