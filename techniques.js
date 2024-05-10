@@ -890,7 +890,66 @@ const TECHNIQUES = [{
     name: "Yoga Poses",
     description: "Engage in specific yoga poses that require concentration and balance. Focus on maintaining each pose, which helps divert your attention from intrusive thoughts to the physical demands of the pose.",
     weight: 1
-}
-
+},
+{
+    category: "Mindfulness",
+    name: "Three-Breath Release",
+    description: "Take three deep breaths. With each inhale, gather tension; with each exhale, release it.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "Acknowledge, Validate, Redirect",
+    description: "Notice your current thought, acknowledge its presence, validate the feeling, then gently redirect your focus to the present.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "Sensory Touch",
+    description: "Touch something nearby with texture, focus on the sensations against your skin.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "Scent Focus",
+    description: "Inhale a fragrance, whether a flower, coffee, or something else nearby, and focus solely on the scent.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "Quick Scan",
+    description: "Close your eyes and quickly scan your body from head to toe, noting any sensations without judgment.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "Sound Immersion",
+    description: "Close your eyes, listen to the nearest sound for a few seconds, and let other senses fade away.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "One-Bite Eating",
+    description: "Take one bite of food and eat it with full attention to the textures, flavors, and sensations.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "Visual Detail",
+    description: "Choose an object nearby, look at it for a few seconds, focusing on every small detail you can notice.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "Finger Stretch",
+    description: "Stretch your fingers wide, hold for a few seconds, focus on the stretch, then slowly relax them.",
+    weight: 1
+},
+{
+    category: "Mindfulness",
+    name: "Gratitude Pulse",
+    description: "Think of one thing you're grateful for right now, focus on the feeling that this thought brings.",
+    weight: 1
+},
 
 ]
