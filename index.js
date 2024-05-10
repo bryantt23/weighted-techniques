@@ -48,42 +48,21 @@ function getMoreTechniques() {
         const li = document.createElement("li");
         li.className = HIGHLIGHTED_CLASS_NAME;
         li.innerHTML = `<div>${name}</div>`
-        let descriptionShown = false;
-        let descriptionElement = null;
-        let btn
-
-        const showDescription = () => {
-            if (!descriptionElement) {
-                descriptionElement = document.createElement("p");
-                descriptionElement.className = "description"
-                descriptionElement.innerText = description;
-            }
-            li.appendChild(descriptionElement);
-            btn.textContent = "Hide Description";
-            descriptionShown = true;
-        }
-
-        const hideDescription = () => {
-            if (descriptionElement) {
-                li.removeChild(descriptionElement);
-            }
-            btn.textContent = "Show Description";
-            descriptionShown = false;
-        }
 
         if (description) {
-            btn = document.createElement("button");
+            const btn = document.createElement("button");
+            btn.className = "toggle-btn"
             btn.textContent = "Show Description";
+            li.classList.add("toggle")
 
+            const descriptionElement = document.createElement("p");
+            descriptionElement.className = "description"
+            descriptionElement.innerText = description;
+
+            // not shown by default
+            descriptionElement.style.display = 'none'
+            li.appendChild(descriptionElement)
             li.appendChild(btn);
-            li.addEventListener("click", () => {
-                if (descriptionShown) {
-                    hideDescription()
-                }
-                else {
-                    showDescription()
-                }
-            })
         }
         techniquesList.prepend(li);
     }
@@ -101,3 +80,27 @@ moreTechniquesBtn.addEventListener("click", getMoreTechniques);
 resetBtn.addEventListener("click", resetTechniques);
 
 resetTechniques();  // Initialize the page with techniques
+
+document.addEventListener("DOMContentLoaded", () => {
+    techniquesList.addEventListener("click", function (event) {
+        let curElement = event.target;
+
+        // traverse up to find element with target class
+        while (curElement && !curElement.classList?.contains("toggle")) {
+            curElement = curElement.parentNode;
+        }
+
+        if (curElement?.classList.contains("toggle")) {
+            const descriptionElement = curElement.querySelector(".description")
+            if (descriptionElement) {
+                const isHidden = descriptionElement.style.display === 'none'
+                descriptionElement.style.display = isHidden ? "block" : "none"
+
+                const btn = curElement.querySelector(".toggle-btn")
+                if (btn) {
+                    btn.textContent = isHidden ? "Hide Description" : "Show Description"
+                }
+            }
+        }
+    })
+})
