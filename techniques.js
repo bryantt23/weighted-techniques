@@ -474,7 +474,8 @@ const TECHNIQUES = [{
 },
 {
     category: "Miscellaneous",
-    name: 'Notice your thought, as in: ah, hello, thought. I know you’re not real; you are just a thought. Oh well, you can stay there if you like, but I have things to do today so I’m just going to go ahead and do them. Then if you want to think a positive thought, go right ahead!',
+    name: "Take a tiny step of noticing the thought and not believing it",
+    description: 'Notice your thought, as in: ah, hello, thought. I know you’re not real; you are just a thought. Oh well, you can stay there if you like, but I have things to do today so I’m just going to go ahead and do them. Then if you want to think a positive thought, go right ahead!',
     weight: 10
 },
 {
