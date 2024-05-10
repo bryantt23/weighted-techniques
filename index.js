@@ -48,41 +48,42 @@ function getMoreTechniques() {
         const li = document.createElement("li");
         li.className = HIGHLIGHTED_CLASS_NAME;
         li.innerHTML = `<div>${name}</div>`
+        let descriptionShown = false;
+        let descriptionElement = null;
+        let btn
+
+        const showDescription = () => {
+            if (!descriptionElement) {
+                descriptionElement = document.createElement("p");
+                descriptionElement.className = "description"
+                descriptionElement.innerText = description;
+            }
+            li.appendChild(descriptionElement);
+            btn.textContent = "Hide Description";
+            descriptionShown = true;
+        }
+
+        const hideDescription = () => {
+            if (descriptionElement) {
+                li.removeChild(descriptionElement);
+            }
+            btn.textContent = "Show Description";
+            descriptionShown = false;
+        }
 
         if (description) {
-            const btn = document.createElement("button");
+            btn = document.createElement("button");
             btn.textContent = "Show Description";
-            let descriptionShown = false;
-            let descriptionElement = null;
-
-            const hideDescription = () => {
-                if (descriptionElement) {
-                    li.removeChild(descriptionElement);
-                }
-                btn.textContent = "Show Description";
-                descriptionShown = false;
-            }
-
-            btn.addEventListener("click", () => {
-                if (!descriptionShown) {
-                    if (!descriptionElement) {
-                        descriptionElement = document.createElement("p");
-                        descriptionElement.className = "description"
-                        descriptionElement.innerText = description;
-
-                        descriptionElement.addEventListener("click", () => {
-                            hideDescription()
-                        })
-                    }
-                    li.appendChild(descriptionElement);
-                    btn.textContent = "Hide Description";
-                    descriptionShown = true;
-                } else {
-                    hideDescription()
-                }
-            });
 
             li.appendChild(btn);
+            li.addEventListener("click", () => {
+                if (descriptionShown) {
+                    hideDescription()
+                }
+                else {
+                    showDescription()
+                }
+            })
         }
         techniquesList.prepend(li);
     }
