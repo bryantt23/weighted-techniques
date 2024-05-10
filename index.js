@@ -55,20 +55,28 @@ function getMoreTechniques() {
             let descriptionShown = false;
             let descriptionElement = null;
 
+            const hideDescription = () => {
+                li.removeChild(descriptionElement);
+                btn.textContent = "Show Description";
+                descriptionShown = false;
+            }
+
             btn.addEventListener("click", () => {
                 if (!descriptionShown) {
                     if (!descriptionElement) {
                         descriptionElement = document.createElement("p");
                         descriptionElement.className = "description"
                         descriptionElement.innerText = description;
+
+                        descriptionElement.addEventListener("click", () => {
+                            hideDescription()
+                        })
                     }
                     li.appendChild(descriptionElement);
                     btn.textContent = "Hide Description";
                     descriptionShown = true;
                 } else {
-                    li.removeChild(descriptionElement);
-                    btn.textContent = "Show Description";
-                    descriptionShown = false;
+                    hideDescription()
                 }
             });
 
