@@ -56,7 +56,9 @@ function getMoreTechniques() {
             let descriptionElement = null;
 
             const hideDescription = () => {
-                li.removeChild(descriptionElement);
+                if (descriptionElement) {
+                    li.removeChild(descriptionElement);
+                }
                 btn.textContent = "Show Description";
                 descriptionShown = false;
             }
