@@ -299,257 +299,257 @@ const TECHNIQUES = [{
     description: "You and your partner take turns playing the roles of Talker and Listener. The Talker spends 30 seconds expressing his or her feelings about a relationship problem. The Listener paraphrases what the Talker said as accurately as possible. The Talker rates the Listener's accuracy from 0% – 100%. Once the Listener receives a rating of 95% or better, you can do a role-reversal. This technique ensures nearly perfect communication. It quickly breaks the pattern of accusation, self-defense, and hostility, and shifts the dialogue to a level of greater vulnerability and intimacy."
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Havening",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Havening touch",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Belly breathing",
     description: "Focus on the rise and fall of my belly",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Nostril breathing",
     description: "Focus on the feel of the air touching my inner nostrils",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Breathe in, Breath out 3 times",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Breathe in sync with my thoughts",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Breathe in think, Breath out think",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Watch what the breath does to my body",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Touch my fidget toy & take 3 breaths",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Count my thoughts",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Embrace my thoughts",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Feel my thoughts in my body",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Z Point Erase the Tape",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Be Set Free Fast",
     description: "Use a keyword after each sentence",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Write thoughts down or visualize the words",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Visualize my thoughts as colors, sizes, and shapes inside of my body",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Visualize my thoughts as colors, sizes, and shapes outside of my body",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Watch my thinker",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Make thinker be silent for a few seconds",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Thinking time",
     weight: 10,
     description: "Give my thinker my full attention"
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Thought defusion--imagine my thoughts on leaves and flying away",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Thought defusion--boring voice i.e. Eckhart Tolle",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Watch breathing while feeling sensations & paying attention to my thinking",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Label my thoughts",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Feel the Inner Body",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Sedona Method: Triple Welcoming",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Sedona Method: Could you? Would you? When?",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Sedona Method: 5th Way",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Sedona Method: Holistic Releasing",
     weight: 5
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Sedona Method: Could you notice this is just a memory?",
     weight: 5
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Question my thoughts",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Daily Mood Log--automatic thought, distortions, realistic response",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "You are responsible. What are you going to do about it?",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Acknowledge, validate, redirect",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Notice your thought, as in: ah, hello, thought. I know you’re not real; you are just a thought. Oh well, you can stay there if you like, but I have things to do today so I’m just going to go ahead and do them. Then if you want to think a positive thought, go right ahead!',
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: "Noticing exercise",
     weight: 10,
     description: "Notice: The physical sensation of your body coming into contact with the chair. The sensation of the soles of your feet touching the floor. The skin surrounding the feet. The inside of the feet. Perhaps, if you’re really attentive, you can feel a tingling, a sense of the life energy pulsating inside the feet? The back of your head Any sounds around you. Nearby sounds? Distant sounds? The physical sensations of the breath flowing in and out of the body. The ribs expanding and contracting. The belly rising and falling. The simple sense of being here, of being alive. And now, a couple of questions: What happened to the problem you were thinking about? Was it still there while you were doing the exercise? Or did you perhaps forget about it while your attention was fixed on the here and now? And the second question. When you are fully present in the moment, i.e. not idly thinking about anything, is there any sense that something is missing? Or is the notion that something is missing no more than a thought — a thought that, when believed, creates misery in your life? Life is happening here and now. When we live in our heads—in the not here, not now— we miss it."
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Redirect my attention to the now',
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Nonstop thinking as long as my shoulder blades are back and down',
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Acknowledge, embrace, calm, release, transform',
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'See it as an object. Get the lesson. Get rid of the object.',
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'See 3 things, feel 3 things, hear 3 things',
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'This feeling x21',
     weight: 10
 },
 {
-    category: "Misc",
-    name: 'What are the benefits of this thought/memory/etc?',
+    category: "Miscellaneous",
+    name: 'What are the benefits of this thought/memory/etc.?',
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'One-Point EFT',
     description: "As I use Mental EFT, it is with two points, doing first the EFT Setup Statement using the Karate Chop point in my mind, and then a point on the xiphoid process of the sternum that is not mentioned in tapping literature, which is located at the lowest bit of cartilage on the breastbone, the last bone before the softer part of the belly, right on the center line of the body.",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Ping pong',
     description: 'The next time you find yourself caught up in some type of love story or money trouble or worry in your head, pay attention and you will see you have thoughts that say completely the opposite. Think about this classic example of contradictory thoughts: “I never want to see him again.” “Why doesn’t he call me?” When you have opposing thoughts like this, take a step back in your mind and look at both thoughts. It’s just like looking at a ping pong match, right? Then just stay there for a while and feel what happens.',
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Look',
     description: "Go for a walk outside; it doesn’t matter where or when. Focus purely on looking at your surroundings. Just look with your eyes, really look, without commenting in your head on what you see. It doesn’t matter if it’s a beautiful forest of a busy shopping street, just keep your attention on what you see and experience the moment. If at any moment a thought pops into your head, don’t grab hold of it; just observe it and let it float by, like a cloud in the sky. In the meantime, keep your attention on your surroundings and keep walking.",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Wait for it',
     description: "Sit down, close your eyes, and say to yourself, “Hmm, I wonder what the next thought is going to be.” Focus on the space inside your head where thoughts seem to come from and sit and wait for the next thought while keeping your focus.",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Look',
     description: "Go for a walk outside; it doesn’t matter where or when. Focus purely on looking at your surroundings. Just look with your eyes, really look, without commenting in your head on what you see. It doesn’t matter if it’s a beautiful forest of a busy shopping street, just keep your attention on what you see and experience the moment. If at any moment a thought pops into your head, don’t grab hold of it; just observe it and let it float by, like a cloud in the sky. In the meantime, keep your attention on your surroundings and keep walking.",
     weight: 10
 },
 {
-    category: "Misc",
+    category: "Miscellaneous",
     name: 'Hum!',
     description: "The amazing Indian tradition of Brahmari is a great emergency tool for calming a chaotic mind. Just close your eyes and go “Huuuummmmmmmmmmm” and keep the “mmmm” going for as long as you can until you hear the “mmmm” in the center of your brain. You can also use “Ohm” or “Aum” if you like, since they end with “mmmm” as well. Do it as long as you can, for as long as you like, and see how it calms and relaxes you.",
     weight: 10

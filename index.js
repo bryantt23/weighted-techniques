@@ -47,7 +47,7 @@ function getMoreTechniques() {
         const { name, description } = techniquesWithWeightedRandomization[i];
         const li = document.createElement("li");
         li.className = HIGHLIGHTED_CLASS_NAME;
-        li.textContent = `${name} `;
+        li.innerHTML = `<div>${name}</div>`
 
         if (description) {
             const btn = document.createElement("button");
