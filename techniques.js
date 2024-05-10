@@ -112,5 +112,342 @@ const TECHNIQUES = [
     {
         category: "Misc", name: 'Hum!', description: "The amazing Indian tradition of Brahmari is a great emergency tool for calming a chaotic mind. Just close your eyes and go “Huuuummmmmmmmmmm” and keep the “mmmm” going for as long as you can until you hear the “mmmm” in the center of your brain. You can also use “Ohm” or “Aum” if you like, since they end with “mmmm” as well. Do it as long as you can, for as long as you like, and see how it calms and relaxes you.", weight: 10
     },
+    {
+        category: "Thought Defusion",
+        name: "Leaf on a Stream",
+        description: "Visualize your thoughts as leaves floating down a stream. As each thought arises, place it on a leaf and watch it drift away.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Clouds in the Sky",
+        description: "Imagine your thoughts are clouds passing through the sky. Observe them drift by without attaching to any particular one.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Written on Sand",
+        description: "Picture writing your thoughts in the sand at the beach. Watch as waves wash them away, symbolizing their temporary nature.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Name the Story",
+        description: "When repetitive thoughts arise, name the 'story' they belong to, such as 'the anxiety story' or 'the old memory story'. This labels the thought without engaging with it.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Silent Witness",
+        description: "Become a silent witness to your thoughts. Observe them without judgment and let them pass.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Singing Thoughts",
+        description: "Sing your thoughts to the tune of a silly or familiar song. This changes your relationship with these thoughts by adding a humorous twist.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Bus Driver",
+        description: "Imagine you are a bus driver and your thoughts are noisy passengers. Acknowledge them but keep your focus on driving the bus.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thank You, Mind",
+        description: "Whenever a troubling thought arises, respond with 'Thank you, mind,' and move on. This acknowledges the thought without dwelling on it.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Movie Screen",
+        description: "Picture your thoughts projected on a movie screen. Watch them from a distance, realizing you are separate from what is being projected.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought for Sale",
+        description: "Imagine trying to sell your troublesome thought to someone else. How would you convince them to buy it? This can highlight the absurdity of some thoughts.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Color the Thought",
+        description: "Visualize a thought as an object and imagine changing its color, size, and shape. Transform it until it loses its original meaning.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Balloons",
+        description: "Visualize your thoughts as balloons floating away into the sky. Release each one and watch it drift off.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Newspaper Headlines",
+        description: "Imagine your thoughts as headlines in a newspaper. Read them as a detached observer, noting how quickly news changes and becomes irrelevant.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Radio Static",
+        description: "Think of your thoughts as radio static. Tune in briefly to acknowledge their presence, then tune out to focus on clearer signals.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mental Teflon",
+        description: "Visualize your mind as a Teflon pan. Thoughts slide off just as easily as food does, leaving no residue.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Conveyor Belt",
+        description: "Picture your thoughts on a conveyor belt, moving past you. You can notice each one but don't need to pick any up.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Subtitles",
+        description: "Imagine your thoughts as subtitles on a movie screen. They appear and disappear, providing information but not controlling the action.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Stage Play",
+        description: "See your thoughts as actors in a stage play. They have their parts to perform but are not the real you.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Echoes",
+        description: "Think of your thoughts as echoes in a canyon. They might sound loud and close but are really just reflections, not realities.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Cartoon Voices",
+        description: "Assign silly cartoon voices to your thoughts. This can make them seem less threatening and more manageable.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Archaeologist",
+        description: "Imagine yourself as an archaeologist, unearthing thoughts like ancient relics. Examine them curiously but remember they belong to a different time.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Helium Thoughts",
+        description: "Imagine your thoughts are tied to helium balloons. As they arise, let them float up and away into the sky.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mind Gardener",
+        description: "See yourself as a gardener, and your thoughts as weeds. You can notice them and choose not to water them, focusing instead on nurturing more helpful thoughts.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mind Parade",
+        description: "Visualize a parade where each float represents a different thought. Watch them pass by from your viewing spot, detached and entertained.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Photographer",
+        description: "Think of yourself as a photographer, capturing thoughts as images. Once captured, they are separate from you, merely pictures in a gallery.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mental Notes",
+        description: "Make a mental note of each thought as it arises, labeling it as 'thinking' or 'judging'. This can help you recognize patterns without getting caught up in them.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Emotional Alchemy",
+        description: "Transform your thoughts by changing their emotional tone. Shift from a critical to a compassionate voice, for example.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Curator",
+        description: "Become a curator of your mind's museum. Decide which thoughts deserve a spot in your main exhibit and which should be stored in the archives.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Translator",
+        description: "Translate your troubling thoughts into a language you don't understand well. This can help you see them as just sounds without meaning.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Floating Lanterns",
+        description: "Visualize your thoughts as lanterns in a festival, each one carrying a thought into the sky where it fades away.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mental Diet",
+        description: "Consider which thoughts are 'junk food' and which are 'nutritious'. Choose to consume more of the healthy ones.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Advertisement Break",
+        description: "View your thoughts as advertisements during a TV show. They're there, but you don't have to buy what they're selling.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Rippling Water",
+        description: "Imagine your thoughts are like ripples on water. They disturb the surface but don't affect the deep, calm waters underneath.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mental Checkout",
+        description: "Visualize a checkout line where each thought has to wait its turn. You can choose which ones to 'check out' and take home with you.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Sweeper",
+        description: "Imagine yourself as a street sweeper, clearing away unnecessary thoughts to keep your mental streets clean and passable.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Tuning Fork",
+        description: "Use the idea of a tuning fork to bring your mind back to a state of calm. When thoughts disrupt your peace, imagine the fork vibrating and bringing harmony back.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Diver",
+        description: "Dive deeper into each thought, exploring its roots and seeing it clearly, which often makes it less powerful.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Snow Globe",
+        description: "Think of your mind like a snow globe. When shaken (stressed), the flakes swirl but eventually settle. Allow your thoughts to settle in the same way.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mental Checkout",
+        description: "When thoughts crowd your mind, imagine checking them out like library books. Some you'll return quickly, others you might renew, but none are permanent.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Conductor",
+        description: "Conduct your thoughts like a symphony. Recognize each one's part in the larger concert of your mind, but don't let any single thought dominate.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Jigsaw Puzzle",
+        description: "Treat your thoughts like pieces of a jigsaw puzzle. They might seem overwhelming alone, but when viewed as part of the bigger picture, they make more sense.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mind Librarian",
+        description: "Act as a librarian of your own mind. Organize thoughts into categories and decide which are helpful and which should be 'checked out'.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Whisperer",
+        description: "Practice being a 'thought whisperer'. Gently guide your thoughts without forcing them, encouraging a calm and peaceful flow.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mental Marbles",
+        description: "Visualize your thoughts as marbles in a game. Some roll close, others far, but you don't have to chase them. Just observe their paths.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mind Mirror",
+        description: "Use the concept of a mirror to reflect thoughts back at themselves. This can help you see them more clearly and objectively.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Mental Recycling",
+        description: "Recycle your thoughts by transforming negative ones into opportunities for learning or positive action.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Balloon Release",
+        description: "Write your troubling thoughts on a piece of paper and attach them to a balloon. Release the balloon outdoors and watch as your thoughts physically float away, symbolizing the release of mental burdens.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Thought Stones",
+        description: "Find a stone and assign it as a physical representation of your persistent thought. Hold the stone in your hand, feel its weight, and then throw it into a body of water or over a cliff, visualizing letting go of the thought.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Walking Meditation",
+        description: "Engage in a walking meditation where with each step, you imagine stomping out the troubling thoughts or leaving them behind. Focus on the rhythm of your steps and the sensation of your feet touching the ground.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Breath Counting",
+        description: "Use your fingers to count breaths. Each time you inhale, extend a finger, and each time you exhale, retract a finger. This physical interaction helps maintain focus on breathing and reduces the impact of intrusive thoughts.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Boxing the Thoughts Away",
+        description: "Physically box in the air or with a punching bag, imagining that with each punch, you're hitting the intrusive thoughts away. This can be both a physical release and a mental visualization of fighting off the negative thoughts.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Nature Connection",
+        description: "Take a nature walk and physically touch trees, plants, and surfaces, focusing on the textures and temperatures. This tactile engagement helps bring your attention to the present moment and away from intrusive thoughts.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Stress Ball Squeeze",
+        description: "Use a stress ball and squeeze it tightly with each intrusive thought, releasing the squeeze slowly as you let the thought go. Repeat this physical action as needed to help manage stress and thoughts.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Physical Grounding",
+        description: "Practice grounding exercises, such as standing barefoot on the ground, feeling the earth beneath your feet. Focus on the connection to the earth to help ground your thoughts and bring you back to the present.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Dance It Out",
+        description: "Put on some music and dance freely, letting your body move without inhibition. Use the dance as a way to physically shake off your troubling thoughts.",
+        weight: 1
+    },
+    {
+        category: "Thought Defusion",
+        name: "Yoga Poses",
+        description: "Engage in specific yoga poses that require concentration and balance. Focus on maintaining each pose, which helps divert your attention from intrusive thoughts to the physical demands of the pose.",
+        weight: 1
+    }
 
-];
+
+]
