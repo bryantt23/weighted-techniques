@@ -434,6 +434,12 @@ const TECHNIQUES = [{
 },
 {
     category: "Miscellaneous",
+    name: "Sedona Method: Triple Welcoming - My paraphrase 2.2",
+    description: "1. Allow yourself to remember a situation in your life that you've been wanting to change or improve, a problem, an issue, anything. 2. Could you welcome the thoughts, emotions, and sensations? Could you just let it all be here? It’s here anyway, so why not just welcome it? 3. Could you welcome any desire to do anything with this? Could you welcome any wanting to change it, make it different, push it away or hold onto it? Could you welcome wanting approval, control, security, welcome any wanting separation or oneness? Welcome all the wanting. Could you resist making it real again? Could you welcome making it real again? 4. Could you welcome taking things personally? Could you welcome any blaming? Could you welcome any sense that any of this is who you really are or that this is part of your identity? 5. Now, just open up inside, and notice what happens. Allow yourself to notice the spin. Allow yourself to notice what is beyond the spin. And what is actually here, right now?",
+    weight: 10
+},
+{
+    category: "Miscellaneous",
     name: "Sedona Method: Could you? Would you? When?",
     weight: 10
 },
@@ -889,6 +895,18 @@ const TECHNIQUES = [{
     category: "Thought Defusion",
     name: "Yoga Poses",
     description: "Engage in specific yoga poses that require concentration and balance. Focus on maintaining each pose, which helps divert your attention from intrusive thoughts to the physical demands of the pose.",
+    weight: 1
+},
+{
+    category: "Thought Defusion",
+    name: "Echoing Thoughts",
+    description: "Engage in the practice of repeating troubling thoughts aloud or in your mind in a neutral or monotonous tone. By doing so, detach yourself from the emotional weight of the thoughts, viewing them as mere words rather than distressing truths. This technique helps in reducing their impact and aids in regaining emotional equilibrium.",
+    weight: 1
+},
+{
+    category: "Thought Defusion",
+    name: "Verbal Repetition",
+    description: "Practice verbally repeating each sentence of your thoughts slowly and deliberately. Repeat each sentence several times until the words start to lose their meaning and emotional charge. This method can help diminish the distress associated with these thoughts and promote a more objective perspective.",
     weight: 1
 },
 {
