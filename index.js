@@ -32,6 +32,7 @@ function weightedRandomSamplingUntilEmpty(items) {
 
 function shuffleItems() {
     techniquesWithWeightedRandomization = weightedRandomSamplingUntilEmpty(TECHNIQUES.slice());
+    console.log("🚀 ~ shuffleItems ~ TECHNIQUES:", TECHNIQUES)
     console.log("🚀 ~ shuffleItems ~ techniquesWithWeightedRandomization:", techniquesWithWeightedRandomization)
 }
 
