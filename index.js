@@ -111,13 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (btn) {
                     btn.textContent = isHidden ? "Hide Description" : "Show Description"
                 }
-
-                if (curElement?.classList.contains("current")) {
-                    const rect = curElement.getBoundingClientRect()
-                    if (rect.bottom > window.innerHeight || rect.top < 0) {
-                        scrollToPageBottom()
-                    }
-                }
             }
         }
     })
