@@ -969,5 +969,35 @@ const TECHNIQUES = [{
     description: "Think of one thing you're grateful for right now, focus on the feeling that this thought brings.",
     weight: 1
 },
+{
+    category: "Thought Defusion",
+    name: "Socratic Questioning",
+    description: "Challenge the assumptions behind your thoughts by asking probing questions such as 'What evidence do I have for this thought?', 'Could I look at this situation differently?', and 'What would I tell a friend who had this thought?'. This technique helps in distancing yourself from distressing thoughts and seeing them in a more objective light.",
+    weight: 1
+},
+{
+    category: "Thought Defusion",
+    name: "Rephrasing Thoughts",
+    description: "Alter the language of your negative thoughts to reduce their emotional impact. For example, change 'I must be perfect' to 'It's good to do my best but perfection is not necessary.' This helps in reducing the emotional charge of the thoughts and promotes rational thinking.",
+    weight: 1
+},
+{
+    category: "Thought Defusion",
+    name: "Labeling Thoughts",
+    description: "Identify and label the type of thought you are having, such as 'worrying', 'predicting', or 'judging'. This can help you to recognize that thoughts are merely thoughts and not facts, which can reduce their emotional impact.",
+    weight: 1
+},
+{
+    category: "Thought Defusion",
+    name: "Third-Person Self-Talk",
+    description: "Talk to yourself in the third person using your name instead of 'I'. For example, 'John is feeling stressed' instead of 'I am stressed'. This creates psychological distance from your own experiences and can help manage emotions more effectively.",
+    weight: 1
+},
+{
+    category: "Thought Defusion",
+    name: "Cognitive Continuum",
+    description: "Think in shades of gray rather than black and white. Instead of viewing situations as complete successes or failures, consider them on a continuum. This approach helps in reducing the extremity of emotional responses to thoughts and promotes a more balanced perspective.",
+    weight: 1
+},
 
 ]
