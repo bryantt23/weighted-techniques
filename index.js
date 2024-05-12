@@ -8,7 +8,7 @@ let bottomElement = null
 const moreTechniquesBtn = document.querySelector(".more");
 const resetBtn = document.querySelector(".reset");
 const techniquesList = document.querySelector('.techniques');
-let TECHNIQUES
+let loadedTechniques = [];
 
 function weightedRandomSamplingUntilEmpty(items) {
     let results = [];
@@ -33,8 +33,8 @@ function weightedRandomSamplingUntilEmpty(items) {
 }
 
 function shuffleItems() {
-    techniquesWithWeightedRandomization = weightedRandomSamplingUntilEmpty(TECHNIQUES.slice());
-    console.log("🚀 ~ shuffleItems ~ TECHNIQUES:", TECHNIQUES)
+    techniquesWithWeightedRandomization = weightedRandomSamplingUntilEmpty(loadedTechniques.slice());
+    console.log("🚀 ~ shuffleItems ~ loadedTechniques:", loadedTechniques)
     console.log("🚀 ~ shuffleItems ~ techniquesWithWeightedRandomization:", techniquesWithWeightedRandomization)
 }
 
@@ -134,7 +134,7 @@ async function fetchTechniques() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    TECHNIQUES = await fetchTechniques()
+    loadedTechniques = await fetchTechniques()
     techniquesList.addEventListener("click", function (event) {
         let curElement = event.target;
 
