@@ -81,7 +81,8 @@ function getMoreTechniques() {
     curPos = endPos;
 }
 
-function resetTechniques() {
+async function resetTechniques() {
+    await loadCurrentTechniques()
     techniquesList.innerHTML = "";
     shuffleItems();
     curPos = 0;
@@ -120,21 +121,29 @@ function fetchFromLocalStorage() {
     }
 }
 
-async function fetchTechniques() {
+async function loadCurrentTechniques() {
     try {
-        return await fetchFromAPI()
-    }
-    catch (apiError) {
+        loadedTechniques = await fetchFromAPI(); // Attempt to load from API
+    } catch (apiError) {
+        console.error("Failed to fetch techniques from API:", apiError);
         try {
-            return fetchFromLocalStorage()
+            loadedTechniques = await fetchFromLocalStorage(); // Fallback to local storage
         } catch (localStorageError) {
+            console.error("Failed to fetch techniques from local storage:", localStorageError);
             throw new Error("No techniques available offline or online.");
         }
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", async () => {
-    loadedTechniques = await fetchTechniques()
+    try {
+        loadedTechniques = await loadCurrentTechniques()
+        resetTechniques();  // Initialize the page with techniques
+    } catch (error) {
+        console.error("Initialization failed:", error);
+    }
+
     techniquesList.addEventListener("click", function (event) {
         let curElement = event.target;
 
@@ -157,5 +166,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     })
 
-    resetTechniques();  // Initialize the page with techniques
 })
