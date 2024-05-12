@@ -47,12 +47,23 @@ function scrollToPageBottom() {
     bottomElement.scrollIntoView({ behavior: "smooth" })
 }
 
-function handleLike(id, btn) {
-    console.log(`Liking technique with ID: ${id}`);
-    // Implement your API call or other logic here
-    // After successful API call or logic:
-    // btn.disabled = true; // Disable the button
-    btn.classList.add('liked'); // Optional: apply a style to indicate it's liked
+async function handleLike(id, btn) {
+    try {
+        const response = await fetch(`https://thought-techniques-api-git-main-bryantt23s-projects.vercel.app/techniques/${id}`, {
+            method: 'PATCH',  // Specify the method
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json()
+        console.log("Data updated from API:", data);
+        btn.classList.add('liked'); // Optional: apply a style to indicate it's liked
+    } catch (error) {
+        console.error("Error:", error);
+    }
 }
 
 function getMoreTechniques() {
@@ -67,9 +78,9 @@ function getMoreTechniques() {
         const likeBtn = document.createElement("button");
         likeBtn.textContent = "Like";
         likeBtn.className = "like-btn"
-        likeBtn.onclick = function (event) {
+        likeBtn.onclick = async function (event) {
             event.stopPropagation(); // Prevents triggering the toggle event
-            handleLike(_id, likeBtn)
+            await handleLike(_id, likeBtn)
         }
         li.appendChild(likeBtn);
 
