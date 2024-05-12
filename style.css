@@ -62,3 +62,20 @@ li {
 ul {
   padding: 0;
 }
+
+button.like-btn {
+  margin-right: 5px;
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transition for background and opacity changes */
+}
+
+button.liked,
+button:disabled {
+  background-color: #27ae60; /* Green to indicate liked */
+  opacity: 0.6; /* Slightly transparent to show it's inactive */
+  pointer-events: none; /* Disables further mouse events */
+  cursor: default;
+}
+
+button:disabled {
+  background-color: #bdc3c7; /* Gray out the button */
+}

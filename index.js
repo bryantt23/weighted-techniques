@@ -47,14 +47,31 @@ function scrollToPageBottom() {
     bottomElement.scrollIntoView({ behavior: "smooth" })
 }
 
+function handleLike(id, btn) {
+    console.log(`Liking technique with ID: ${id}`);
+    // Implement your API call or other logic here
+    // After successful API call or logic:
+    // btn.disabled = true; // Disable the button
+    btn.classList.add('liked'); // Optional: apply a style to indicate it's liked
+}
+
 function getMoreTechniques() {
     const endPos = Math.min(curPos + PAGE_SIZE, techniquesWithWeightedRandomization.length);
     removeHighlighting();
     for (let i = curPos; i < endPos; i++) {
-        const { name, description } = techniquesWithWeightedRandomization[i];
+        const { name, description, _id } = techniquesWithWeightedRandomization[i];
         const li = document.createElement("li");
         li.className = HIGHLIGHTED_CLASS_NAME;
         li.innerHTML = `<div>${name}</div>`
+
+        const likeBtn = document.createElement("button");
+        likeBtn.textContent = "Like";
+        likeBtn.className = "like-btn"
+        likeBtn.onclick = function (event) {
+            event.stopPropagation(); // Prevents triggering the toggle event
+            handleLike(_id, likeBtn)
+        }
+        li.appendChild(likeBtn);
 
         if (description) {
             const btn = document.createElement("button");
@@ -72,6 +89,7 @@ function getMoreTechniques() {
             li.appendChild(btn);
         }
         techniquesList.append(li);
+
 
         if (i === endPos - 1) {
             bottomElement = li;
