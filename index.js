@@ -43,8 +43,8 @@ function removeHighlighting() {
     highlightedItems.forEach(item => item.classList.remove(HIGHLIGHTED_CLASS_NAME));
 }
 
-function scrollToPageBottom() {
-    bottomElement.scrollIntoView({ behavior: "smooth" })
+function scrollToFirstNewItem(element) {
+    element.scrollIntoView({ behavior: "smooth" });
 }
 
 async function handleLike(id, btn) {
@@ -69,6 +69,7 @@ async function handleLike(id, btn) {
 function getMoreTechniques() {
     const endPos = Math.min(curPos + PAGE_SIZE, techniquesWithWeightedRandomization.length);
     removeHighlighting();
+    let firstItemElement = null;
     for (let i = curPos; i < endPos; i++) {
         const { name, description, _id } = techniquesWithWeightedRandomization[i];
         const li = document.createElement("li");
@@ -106,10 +107,12 @@ function getMoreTechniques() {
         techniquesList.append(li);
 
 
-        if (i === endPos - 1) {
-            bottomElement = li;
-            scrollToPageBottom()
+        if (i === curPos) {
+            firstItemElement = li;
         }
+    }
+    if (firstItemElement) {
+        scrollToFirstNewItem(firstItemElement);
     }
     curPos = endPos;
 }
