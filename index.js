@@ -8,6 +8,7 @@ let bottomElement = null
 const moreTechniquesBtn = document.querySelector(".more");
 const resetBtn = document.querySelector(".reset");
 const techniquesList = document.querySelector('.techniques');
+let TECHNIQUES
 
 function weightedRandomSamplingUntilEmpty(items) {
     let results = [];
@@ -90,9 +91,31 @@ function resetTechniques() {
 moreTechniquesBtn.addEventListener("click", getMoreTechniques);
 resetBtn.addEventListener("click", resetTechniques);
 
-resetTechniques();  // Initialize the page with techniques
 
-document.addEventListener("DOMContentLoaded", () => {
+
+async function fetchAndStoreTechniques() {
+    try {
+        const res = await axios.get("https://thought-techniques-api-git-main-bryantt23s-projects.vercel.app/techniques")
+        console.log("🚀 ~ fetchAndStoreTechniques ~ res:", res)
+        TECHNIQUES = res.data
+    } catch (error) {
+        console.log("🚀 ~ fetchAndStoreTechniques ~ error:", error)
+
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const techniquesData = localStorage.getItem("techniques")
+
+    // if (techniquesData) {
+    //     const techniquesFromLocalStorage = JSON.parse(techniquesData)
+    //     TECHNIQUES = techniquesFromLocalStorage
+    // }
+    // else {
+
+    await fetchAndStoreTechniques()
+    // }
+
     techniquesList.addEventListener("click", function (event) {
         let curElement = event.target;
 
@@ -114,4 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     })
+
+    resetTechniques();  // Initialize the page with techniques
 })
