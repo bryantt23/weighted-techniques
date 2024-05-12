@@ -91,31 +91,50 @@ function resetTechniques() {
 moreTechniquesBtn.addEventListener("click", getMoreTechniques);
 resetBtn.addEventListener("click", resetTechniques);
 
-
-
-async function fetchAndStoreTechniques() {
+async function fetchFromAPI() {
     try {
-        const res = await axios.get("https://thought-techniques-api-git-main-bryantt23s-projects.vercel.app/techniques")
-        console.log("🚀 ~ fetchAndStoreTechniques ~ res:", res)
-        TECHNIQUES = res.data
+        const response = await fetch("https://thought-techniques-api-git-main-bryantt23s-projects.vercel.app/techniques")
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json()
+        console.log("Data fetched from API:", data);
+        localStorage.setItem("techniques", JSON.stringify(data)); // Cache new data
+        return data
     } catch (error) {
-        console.log("🚀 ~ fetchAndStoreTechniques ~ error:", error)
+        console.error("Error fetching from API:", error);
+        throw error;  // Re-throw to handle it in the main logic or another helper
+    }
+}
 
+function fetchFromLocalStorage() {
+    try {
+        const storedData = localStorage.getItem("techniques")
+        if (!storedData) {
+            throw new Error("No data found in local storage")
+        }
+        return JSON.parse(storedData)
+    } catch (error) {
+        console.error("Error fetching from local storage:", error);
+        throw error;  // Re-throw to handle it in the main logic
+    }
+}
+
+async function fetchTechniques() {
+    try {
+        return await fetchFromAPI()
+    }
+    catch (apiError) {
+        try {
+            return fetchFromLocalStorage()
+        } catch (localStorageError) {
+            throw new Error("No techniques available offline or online.");
+        }
     }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const techniquesData = localStorage.getItem("techniques")
-
-    // if (techniquesData) {
-    //     const techniquesFromLocalStorage = JSON.parse(techniquesData)
-    //     TECHNIQUES = techniquesFromLocalStorage
-    // }
-    // else {
-
-    await fetchAndStoreTechniques()
-    // }
-
+    TECHNIQUES = await fetchTechniques()
     techniquesList.addEventListener("click", function (event) {
         let curElement = event.target;
 
