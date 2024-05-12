@@ -82,7 +82,6 @@ function getMoreTechniques() {
             event.stopPropagation(); // Prevents triggering the toggle event
             await handleLike(_id, likeBtn)
         }
-        li.appendChild(likeBtn);
 
         if (description) {
             const btn = document.createElement("button");
@@ -97,8 +96,13 @@ function getMoreTechniques() {
             // not shown by default
             descriptionElement.style.display = 'none'
             li.appendChild(descriptionElement)
+            li.appendChild(likeBtn);
             li.appendChild(btn);
         }
+        else {
+            li.appendChild(likeBtn);
+        }
+
         techniquesList.append(li);
 
 
