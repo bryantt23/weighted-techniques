@@ -3,6 +3,7 @@ const HIGHLIGHTED_CLASS_NAME = "current";
 
 let techniquesWithWeightedRandomization = [];
 let curPos = 0;
+let bottomElement = null
 
 const moreTechniquesBtn = document.querySelector(".more");
 const resetBtn = document.querySelector(".reset");
@@ -41,6 +42,10 @@ function removeHighlighting() {
     highlightedItems.forEach(item => item.classList.remove(HIGHLIGHTED_CLASS_NAME));
 }
 
+function scrollToPageBottom() {
+    bottomElement.scrollIntoView()
+}
+
 function getMoreTechniques() {
     const endPos = Math.min(curPos + PAGE_SIZE, techniquesWithWeightedRandomization.length);
     removeHighlighting();
@@ -65,7 +70,12 @@ function getMoreTechniques() {
             li.appendChild(descriptionElement)
             li.appendChild(btn);
         }
-        techniquesList.prepend(li);
+        techniquesList.append(li);
+
+        if (i === endPos - 1) {
+            bottomElement = li;
+            scrollToPageBottom()
+        }
     }
     curPos = endPos;
 }
@@ -100,6 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const btn = curElement.querySelector(".toggle-btn")
                 if (btn) {
                     btn.textContent = isHidden ? "Hide Description" : "Show Description"
+                }
+                if (curElement?.classList.contains("current")) {
+                    scrollToPageBottom()
                 }
             }
         }
