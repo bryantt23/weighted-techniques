@@ -61,6 +61,7 @@ async function handleLike(id, btn) {
         const data = await response.json()
         console.log("Data updated from API:", data);
         btn.classList.add('liked'); // Optional: apply a style to indicate it's liked
+        btn.disabled = true
     } catch (error) {
         console.error("Error:", error);
     }

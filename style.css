@@ -72,10 +72,5 @@ button.liked,
 button:disabled {
   background-color: #27ae60; /* Green to indicate liked */
   opacity: 0.6; /* Slightly transparent to show it's inactive */
-  pointer-events: none; /* Disables further mouse events */
   cursor: default;
-}
-
-button:disabled {
-  background-color: #bdc3c7; /* Gray out the button */
 }
