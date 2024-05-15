@@ -1,4 +1,4 @@
-const PAGE_SIZE = 3;
+const PAGE_SIZE = 16;
 const HIGHLIGHTED_CLASS_NAME = "current";
 
 let techniquesWithWeightedRandomization = [];
