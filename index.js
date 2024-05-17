@@ -80,10 +80,10 @@ function getMoreTechniques() {
     removeHighlighting();
     let firstItemElement = null;
     for (let i = curPos; i < endPos; i++) {
-        const { name, description, _id } = techniquesWithWeightedRandomization[i];
+        const { name, description, weight, _id } = techniquesWithWeightedRandomization[i];
         const li = document.createElement("li");
         li.className = HIGHLIGHTED_CLASS_NAME;
-        li.innerHTML = `<div>${name}</div>`
+        li.innerHTML = `<div>${name} (${weight})</div>`
 
         const likeBtn = document.createElement("button");
         likeBtn.textContent = "Like";
